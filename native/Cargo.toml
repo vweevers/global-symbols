@@ -1,0 +1,18 @@
+[package]
+name = "global-symbols"
+version = "0.1.0"
+authors = ["Vincent Weevers"]
+license = "MIT"
+build = "build.rs"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "node_goblin"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.3.2"
+
+[dependencies]
+neon = "0.3.2"
+goblin = "0.0.24"
